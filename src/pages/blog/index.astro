@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogCard from '@/components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Collect all unique tags
+const allTags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+---
+
+<BaseLayout title="Blog" description="Biyoidentikal hormon tedavisi, sağlıklı yaşlanma ve kadın sağlığı üzerine yazılar.">
+
+  <!-- ── PAGE HEADER ──────────────────────────────────────────── -->
+  <div class="bg-forest text-ivory py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="font-sans text-xs uppercase tracking-[0.25em] text-gold mb-3">Yazılar</p>
+      <h1 class="font-serif text-4xl font-bold">Blog</h1>
+      <div class="w-16 h-px bg-gold mx-auto mt-6"></div>
+      <p class="font-sans text-ivory/60 text-sm mt-4 max-w-xl mx-auto">
+        Hormon sağlığı, sağlıklı yaşlanma ve kadın sağlığı üzerine kanıta dayalı yazılar.
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+
+    <!-- Tag filter (decorative for now — could be made interactive) -->
+    {allTags.length > 0 && (
+      <div class="flex gap-2 flex-wrap mb-10 justify-center">
+        {allTags.map((tag) => (
+          <span class="text-xs font-sans uppercase tracking-widest text-sage border border-sage/40 px-3 py-1">
+            {tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Grid -->
+    {posts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            excerpt={post.data.description}
+            date={post.data.date}
+            slug={post.slug}
+            coverImage={post.data.coverImage}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="text-center text-warm/50 font-sans">Henüz yazı eklenmedi.</p>
+    )}
+
+  </div>
+
+</BaseLayout>

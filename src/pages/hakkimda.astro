@@ -1,0 +1,162 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Hakkımda"
+  description="Prof. Dr. Elif Akkaş Yılmaz hakkında — eğitim, uzmanlık alanları ve akademik çalışmalar."
+>
+
+  <!-- ── PAGE HEADER ──────────────────────────────────────────── -->
+  <div class="bg-forest text-ivory py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="font-sans text-xs uppercase tracking-[0.25em] text-gold mb-3">Hakkımda</p>
+      <h1 class="font-serif text-4xl font-bold">Prof. Dr. Elif Akkaş Yılmaz</h1>
+      <div class="w-16 h-px bg-gold mx-auto mt-6"></div>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ─────────────────────────────────────────── -->
+  <div class="section max-w-4xl">
+
+    <!-- Photo + intro -->
+    <div class="flex flex-col md:flex-row gap-12 items-start mb-16">
+
+      <!-- Photo -->
+      <div class="flex-shrink-0 mx-auto md:mx-0">
+        <div class="w-56 h-56 rounded-full overflow-hidden border-4 border-sage/30 bg-sage/10 flex items-center justify-center">
+
+               <img src="/images/elif-akkasyon.jpg" alt="Prof. Dr. Elif Akkaş Yılmaz" class="w-full h-full object-cover" />
+
+          <span class="font-serif text-6xl text-sage/40">E</span>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="flex-1">
+        <h2 class="font-serif text-2xl text-forest font-semibold mb-1">
+          Prof. Dr. Elif Akkaş Yılmaz
+        </h2>
+        <p class="font-sans text-sm text-gold uppercase tracking-widest mb-4">
+          Kadın Hastalıkları ve Doğum Uzmanı
+        </p>
+        <div class="divider mx-0"></div>
+        <p class="font-sans text-warm leading-relaxed mt-6">
+          <!--
+            BİYOGRAFİNİZİ BURAYA EKLEYİN.
+            Örnek metin aşağıdadır — kendi cümlelerinizle değiştirin.
+          -->
+          Tıp hayatım boyunca kadın sağlığını en geniş anlamıyla ele almayı hedefledim.
+          Kadın doğum uzmanlığının yanı sıra, özellikle perimenopoz ve menopoz dönemindeki
+          hormonal değişimlerin yönetimi ve biyoidentikal hormon replasman tedavisi konularında
+          uzmanlaştım. Amacım, her kadının kendi bedenini daha iyi anlamasına yardımcı olmak
+          ve yaşamın her evresinde kaliteyi koruyacak araçları sunmaktır.
+        </p>
+      </div>
+    </div>
+
+    <!-- Credentials grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Eğitim -->
+      <div>
+        <h3 class="font-serif text-xl text-forest font-semibold mb-4">Eğitim</h3>
+        <div class="w-10 h-px bg-gold mb-6"></div>
+        <ul class="space-y-4 font-sans text-sm text-warm">
+          <!--
+            EĞİTİM BİLGİLERİNİZİ BURAYA EKLEYİN
+          -->
+          <li class="flex gap-3">
+            <span class="text-gold font-semibold flex-shrink-0">——</span>
+            <div>
+              <p class="font-medium text-forest">Tıp Fakültesi</p>
+              <p class="text-warm/60">Üniversite adı · Yıl</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-gold font-semibold flex-shrink-0">——</span>
+            <div>
+              <p class="font-medium text-forest">Kadın Hastalıkları ve Doğum Uzmanlığı</p>
+              <p class="text-warm/60">Üniversite adı · Yıl</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-gold font-semibold flex-shrink-0">——</span>
+            <div>
+              <p class="font-medium text-forest">Profesörlük</p>
+              <p class="text-warm/60">Üniversite adı · Yıl</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Uzmanlık Alanları -->
+      <div>
+        <h3 class="font-serif text-xl text-forest font-semibold mb-4">Uzmanlık Alanları</h3>
+        <div class="w-10 h-px bg-gold mb-6"></div>
+        <ul class="space-y-3 font-sans text-sm text-warm">
+          {[
+            'Biyoidentikal Hormon Replasman Tedavisi (BHRT)',
+            'Perimenopoz ve Menopoz Yönetimi',
+            'Kadın Sağlığı ve Sağlıklı Yaşlanma',
+            'Hormonal Değerlendirme ve Kişiselleştirilmiş Tedavi',
+            'Osteoporoz Önleme',
+            'Kadın Cinsel Sağlığı',
+          ].map((item) => (
+            <li class="flex gap-3 items-start">
+              <span class="text-sage mt-0.5">◆</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Akademik Çalışmalar -->
+      <div>
+        <h3 class="font-serif text-xl text-forest font-semibold mb-4">Akademik Çalışmalar</h3>
+        <div class="w-10 h-px bg-gold mb-6"></div>
+        <ul class="space-y-4 font-sans text-sm text-warm">
+          <!--
+            YAYINLARINIZI BURAYA EKLEYİN
+          -->
+          <li class="flex gap-3">
+            <span class="text-gold font-semibold flex-shrink-0">——</span>
+            <p>Yayın başlığı, dergi adı, yıl — <em>buraya ekleyin</em></p>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-gold font-semibold flex-shrink-0">——</span>
+            <p>Yayın başlığı, dergi adı, yıl — <em>buraya ekleyin</em></p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Görevler ve Üyelikler -->
+      <div>
+        <h3 class="font-serif text-xl text-forest font-semibold mb-4">Görevler ve Üyelikler</h3>
+        <div class="w-10 h-px bg-gold mb-6"></div>
+        <ul class="space-y-3 font-sans text-sm text-warm">
+          <!--
+            GÖREVLERİNİZİ VE ÜYELİKLERİNİZİ BURAYA EKLEYİN
+          -->
+          <li class="flex gap-3 items-start">
+            <span class="text-sage mt-0.5">◆</span>
+            <span>Kurum / Dernek adı · Görev</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="text-sage mt-0.5">◆</span>
+            <span>Kurum / Dernek adı · Görev</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center border-t border-sage/20 pt-12">
+      <p class="font-sans text-warm/70 mb-6">Sorularınız mı var? Bana ulaşın.</p>
+      <a href="/iletisim" class="btn-primary">İletişime Geç</a>
+    </div>
+
+  </div>
+
+</BaseLayout>

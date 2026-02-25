@@ -1,0 +1,93 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  coverImage?: string;
+  tags?: string[];
+}
+
+const { title, description, date, coverImage, tags } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('tr-TR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    {coverImage && (
+      <div class="w-full h-72 md:h-96 overflow-hidden">
+        <img
+          src={coverImage}
+          alt={title}
+          class="w-full h-full object-cover"
+        />
+      </div>
+    )}
+
+    <div class="section max-w-3xl">
+      <!-- Tags -->
+      {tags && tags.length > 0 && (
+        <div class="flex gap-2 flex-wrap mb-4">
+          {tags.map((tag) => (
+            <span class="text-xs font-sans uppercase tracking-widest text-sage border border-sage px-2 py-0.5">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-forest mb-4 leading-tight">
+        {title}
+      </h1>
+
+      <div class="divider mx-0"></div>
+
+      <p class="text-sm font-sans text-warm/60 mt-4 mb-10">{formattedDate}</p>
+
+      <!-- Blog post body -->
+      <div class="prose-content">
+        <slot />
+      </div>
+
+      <!-- Back link -->
+      <div class="mt-16 pt-8 border-t border-sage/20">
+        <a href="/blog" class="font-sans text-sm text-sage hover:text-forest transition-colors">
+          ← Tüm yazılara dön
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-content :global(h2) {
+    @apply text-2xl font-serif text-forest mt-10 mb-4;
+  }
+  .prose-content :global(h3) {
+    @apply text-xl font-serif text-forest mt-8 mb-3;
+  }
+  .prose-content :global(p) {
+    @apply text-warm mb-5 leading-relaxed;
+  }
+  .prose-content :global(ul) {
+    @apply list-disc list-inside space-y-2 mb-5 text-warm;
+  }
+  .prose-content :global(ol) {
+    @apply list-decimal list-inside space-y-2 mb-5 text-warm;
+  }
+  .prose-content :global(strong) {
+    @apply text-forest font-semibold;
+  }
+  .prose-content :global(blockquote) {
+    @apply border-l-4 border-gold pl-5 italic text-warm/80 my-6;
+  }
+  .prose-content :global(a) {
+    @apply text-sage underline hover:text-forest transition-colors;
+  }
+</style>

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-ivory text-warm;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-forest;
+  }
+
+  p {
+    @apply font-sans leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-forest text-ivory font-sans text-sm tracking-widest uppercase px-8 py-3
+           hover:bg-sage transition-colors duration-300;
+  }
+
+  .btn-outline {
+    @apply inline-block border border-forest text-forest font-sans text-sm tracking-widest uppercase px-8 py-3
+           hover:bg-forest hover:text-ivory transition-colors duration-300;
+  }
+
+  .section {
+    @apply max-w-5xl mx-auto px-6 py-16;
+  }
+
+  .divider {
+    @apply w-16 h-px bg-gold mx-auto my-6;
+  }
+}

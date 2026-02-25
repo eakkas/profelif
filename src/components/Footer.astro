@@ -1,0 +1,24 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-forest text-ivory/80 mt-auto">
+  <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="font-serif text-ivory text-sm">
+      Prof. Dr. Elif Akkaş Yılmaz
+    </p>
+    <p class="font-sans text-xs text-ivory/50">
+      © {year} — Tüm hakları saklıdır
+    </p>
+    <nav class="flex gap-6">
+      <a href="/hakkimda" class="font-sans text-xs hover:text-ivory transition-colors">Hakkımda</a>
+      <a href="/blog"     class="font-sans text-xs hover:text-ivory transition-colors">Blog</a>
+      <a href="/iletisim" class="font-sans text-xs hover:text-ivory transition-colors">İletişim</a>
+    </nav>
+  </div>
+  <div class="border-t border-ivory/10 text-center py-4">
+    <p class="font-sans text-xs text-ivory/30">
+      Bu sitedeki bilgiler genel sağlık bilgisi amaçlıdır ve kişisel tıbbi tavsiye yerine geçmez.
+    </p>
+  </div>
+</footer>

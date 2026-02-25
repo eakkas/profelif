@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogCard from '@/components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const recentPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout title="Ana Sayfa">
+
+  <!-- ── HERO ────────────────────────────────────────────────── -->
+  <section class="bg-ivory">
+    <div class="max-w-5xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Text -->
+      <div class="flex-1 text-center md:text-left">
+        <p class="font-sans text-xs uppercase tracking-[0.25em] text-gold mb-4">
+          Kadın Sağlığı · Hormon Uzmanı
+        </p>
+        <h1 class="font-serif text-4xl md:text-5xl font-bold text-forest leading-tight mb-6">
+          Sağlıklı Yaşlanma<br />Sizin Elinizde
+        </h1>
+        <div class="divider md:mx-0"></div>
+        <p class="font-sans text-warm/80 text-base leading-relaxed mt-6 mb-8 max-w-lg">
+          Biyoidentikal hormon replasman tedavisi ve kadın sağlığı alanındaki güncel bilimsel
+          gelişmeleri, anlaşılır bir dille sizlerle paylaşıyorum. Hormonlarınızı anlayın,
+          yaşamınızı güçlendirin.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="/blog" class="btn-primary">Yazıları Keşfet</a>
+          <a href="/hakkimda" class="btn-outline">Hakkımda</a>
+        </div>
+      </div>
+
+      <!-- Photo placeholder -->
+      <div class="flex-shrink-0">
+        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-sage/30 bg-sage/10 flex items-center justify-center">
+
+               <img src="/images/elif-akkasyon.jpg" alt="Prof. Dr. Elif Akkaş Yılmaz" class="w-full h-full object-cover" />
+        
+          <span class="font-serif text-7xl text-sage/40">E</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT STRIP ─────────────────────────────────────────── -->
+  <section class="bg-forest text-ivory">
+    <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+      <div class="flex-1">
+        <h2 class="font-serif text-2xl font-semibold mb-3">Prof. Dr. Elif Akkaş Yılmaz</h2>
+        <p class="font-sans text-ivory/70 text-sm leading-relaxed max-w-2xl">
+          Kadın doğum uzmanı ve biyoidentikal hormon replasman tedavisi alanında uzman.
+          Yıllarca süren akademik çalışma ve klinik deneyimimi, kadınların sağlıklı ve
+          güçlü bir yaşam sürmesi için sunuyorum.
+        </p>
+      </div>
+      <a href="/hakkimda" class="flex-shrink-0 inline-block border border-ivory/40 text-ivory font-sans text-sm tracking-widest uppercase px-8 py-3 hover:bg-ivory hover:text-forest transition-colors duration-300">
+        Daha Fazla
+      </a>
+    </div>
+  </section>
+
+  <!-- ── RECENT BLOG POSTS ───────────────────────────────────── -->
+  <section class="section">
+    <div class="text-center mb-12">
+      <p class="font-sans text-xs uppercase tracking-[0.25em] text-gold mb-2">Son Yazılar</p>
+      <h2 class="font-serif text-3xl font-semibold text-forest">Blog</h2>
+      <div class="divider"></div>
+    </div>
+
+    {recentPosts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {recentPosts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            excerpt={post.data.description}
+            date={post.data.date}
+            slug={post.slug}
+            coverImage={post.data.coverImage}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/blog" class="btn-outline">Tüm Yazıları Gör</a>
+      </div>
+    ) : (
+      <p class="text-center text-warm/50 font-sans">Yakında yazılar eklenecek.</p>
+    )}
+  </section>
+
+</BaseLayout>
