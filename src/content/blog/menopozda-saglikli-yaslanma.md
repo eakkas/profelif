@@ -3,6 +3,7 @@ title: "Menopozda Sağlıklı Yaşlanma: Neler Yapılabilir?"
 description: "Menopoz kaçınılmaz bir süreçtir; ancak bu dönemi nasıl geçirdiğimiz büyük ölçüde elimizdedir. Yaşam kalitesini korumanın yollarına birlikte bakalım."
 date: 2026-02-15
 tags: ["Sağlıklı Yaşlanma", "Menopoz", "Yaşam Kalitesi"]
+coverImage: "/images/blog/bhrt-nedir.jpg"
 draft: false
 ---
 
