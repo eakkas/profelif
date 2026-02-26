@@ -3,6 +3,7 @@ title: "Biyoidentikal Hormon Replasman Tedavisi Nedir?"
 description: "Biyoidentikal hormonlar, sentetik hormonlardan nasıl ayrılır? Kimler için uygundur ve ne gibi faydalar sağlar?"
 date: 2026-02-01
 tags: ["BHRT", "Hormon Sağlığı", "Menopoz"]
+coverImage: "/images/blog/bhrt-nedir.jpg"
 draft: false
 ---
 
