@@ -65,7 +65,6 @@ Kadınlarda testosteron düzeyleri yaşla birlikte — özellikle perimenopoz ve
 - Kas tonusunda ve gücünde azalma
 - Kemik kaybı (osteopeni/osteoporoz riski)
 - Kalp çarpıntıları
-- Eklem ağrıları ve sertlik
 
 ### Jinekolojik Belirtiler
 
@@ -81,8 +80,6 @@ Kadınlarda testosteron düzeyleri yaşla birlikte — özellikle perimenopoz ve
 - Özgüven azalması
 - Aşırı duygusal hassasiyet
 - Anksiyete
-- Genel yaşam memnuniyetinde azalma
-
 ---
 
 *Testosteron; östrojen ve progesteron ile birlikte kadın hormonal dengesinin üç temel direğinden biridir. Diğer hormonlar hakkında detaylı bilgi için [progesteron rehberimize](/blog/progesteron-kadin-vucudunun-denge-hormonu) ve [östrojen rehberimize](/blog/ostrojen-kadin-sagliginin-temel-hormonu) göz atabilirsiniz. Biyoeşdeğer hormon tedavisi sürecinin nasıl işlediğini öğrenmek için [tedavi süreci rehberimizi](/blog/biyoesdeger-hormon-tedavisine-baslama-sureci) okuyabilirsiniz.*
