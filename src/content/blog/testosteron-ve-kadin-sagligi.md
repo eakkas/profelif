@@ -22,7 +22,6 @@ Testosteron, kas ve kemik sağlığının korunmasında temel rol oynayan kritik
 - Kemik mineral yoğunluğunu artırır ve kırık riskini azaltır
 - Kas kütlesini ve tonusunu artırır
 - Yağsız vücut kütlesini, gücü ve dayanıklılığı korur
-- Egzersizden alınan verimi artırır
 
 ### Beyin ve Ruh Hali
 
@@ -31,8 +30,6 @@ Testosteron, beynin enerji ve motivasyon kaynağıdır.
 - Cinsel isteği (libido) artırır
 - Enerji seviyesini yükselterek ve ruh halini iyileştirerek genel iyilik halini destekler
 - Hafızayı ve bilişsel fonksiyonları destekler
-- Motivasyonu ve kararlılık hissini güçlendirir
-- Özgüveni destekler
 
 ### Kalp-Damar Sistemi
 
@@ -51,7 +48,6 @@ Testosteron, cildin yapısını ve yağ dengesini belirleyen hormonlardan biridi
 
 ### Metabolizma ve Kan Şekeri
 
-- İnsülin duyarlılığını artırır ve kan şekeri dengesine katkı sağlar
 - Metabolizma hızını destekler
 
 ## Testosteron Eksikliğinde Görülen Belirtiler
@@ -77,7 +73,6 @@ Kadınlarda testosteron düzeyleri yaşla birlikte — özellikle perimenopoz ve
 - Vajinal kuruluk
 - İdrar kaçırma (inkontinans)
 - Libido kaybı ve cinsel isteksizlik
-- Cinsel uyarılma güçlüğü ve orgazm zorluğu
 
 ### Duygusal ve Ruh Hali Belirtileri
 
