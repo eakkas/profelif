@@ -3,7 +3,7 @@ title: "Biyoeşdeğer (Biyoidentikal) Hormon Replasman Tedavisi Nedir?"
 description: "Biyoeşdeğer hormon replasman tedavisi (BHRT) nedir? Biyoidentikal hormonlar sentetik hormonlardan nasıl ayrılır, kimlere uygulanır, faydaları ve güvenliği nedir? Kapsamlı rehber."
 date: 2026-03-03
 tags: ["BHRT", "Biyoeşdeğer Hormon", "Biyoidentikal Hormon", "Hormon Sağlığı", "Menopoz", "Hormon Replasman Tedavisi"]
-coverImage: "/images/blog/bhrt-nedir.jpg"
+coverImage: "/images/blog/bhrt-nedir.png"
 draft: false
 ---
 
